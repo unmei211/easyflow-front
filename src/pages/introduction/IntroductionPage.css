@@ -1,0 +1,28 @@
+.introduction__container {
+  /*width: 50rem;*/
+  /*height: 60rem;*/
+  justify-content: center;
+  align-items: start;
+}
+
+.introduction__page {
+  align-items: center;
+}
+
+.introduction__items {
+  width: 100%;
+  gap: 1.5rem;
+}
+
+.introduction__header {
+  font-size: 2rem;
+}
+
+.introduction__devel {
+  margin-top: 0.5rem;
+  align-self: end;
+}
+
+.introduction__text {
+  font-size: 1.5rem;
+}

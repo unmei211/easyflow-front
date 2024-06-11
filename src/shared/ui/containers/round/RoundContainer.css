@@ -1,0 +1,11 @@
+.round-container {
+  padding: 1.5rem;
+
+  background-color: aliceblue;
+  border-radius: 1.2rem;
+  border-style: solid;
+  border-color: mediumslateblue;
+  border-width: 0.3rem;
+
+  display: flex;
+}

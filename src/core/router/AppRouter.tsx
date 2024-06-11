@@ -1,12 +1,12 @@
 import { Routes, Route } from "react-router";
 import PublicRoute from "../../routes/PublicRoute.tsx";
-import MainPage from "../../pages/main/MainPage.tsx";
+import IntroductionPage from "../../pages/introduction/IntroductionPage.tsx";
 
 const AppRouter = () => {
   return (
     <Routes>
       <Route element={<PublicRoute />}>
-        <Route path="/" element={<MainPage />} />
+        <Route path="/" element={<IntroductionPage />} />
       </Route>
     </Routes>
   );

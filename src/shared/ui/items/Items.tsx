@@ -1,12 +1,10 @@
-import { ReactElement } from "react";
-
-enum Direction {
-  horizontal = "horizontal",
-  vertical = "vertical",
-}
+import { ReactNode } from "react";
+import { Direction } from "../direction/Direction.tsx";
+import "./Items.css";
+import "../direction/Direction.css";
 
 type ItemsProps = {
-  children: ReactElement[];
+  children: ReactNode;
   className?: string;
   direction?: Direction;
 };
@@ -16,8 +14,9 @@ const Items = ({
   direction = Direction.horizontal,
   className = "",
 }: ItemsProps) => {
-  console.log(children[1]);
-  return <li className={"items " + className}></li>;
+  return <div className={`items ${direction} ${className}`}>{children}</div>;
 };
 
 export default Items;
+
+export { Direction };

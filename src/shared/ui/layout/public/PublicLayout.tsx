@@ -1,24 +1,32 @@
 import { LayoutProps } from "../LayoutProps.tsx";
-import Items from "../../items/Items.tsx";
+import Items, { Direction } from "../../items/Items.tsx";
+
+import "../Layout.css";
+import RoundContainer from "../../containers/round/RoundContainer.tsx";
 
 const PublicLayout = ({ children }: LayoutProps) => {
   return (
     <div className="layout">
-      <header className="layout__header">
-        <div>drop down list</div>
-        <Items>
-          <li>first</li>
-          <li>two</li>
-          <li>three</li>
-        </Items>
-        {/*<ul className="layout__navigation">*/}
-        {/*  <li>first</li>*/}
-        {/*  <li>two</li>*/}
-        {/*  <li>three</li>*/}
-        {/*</ul>*/}
-        <div className="layout__profile-modal">modal profile</div>
+      <header className={"layout__header"}>
+        <RoundContainer className={"layout__header-container"}>
+          <>
+            <Items className="layout__header-left">
+              <div>drop down list</div>
+              <h1 className="layout__header-app">easyflow</h1>
+              <Items
+                direction={Direction.horizontal}
+                className={"layout__navigation"}
+              >
+                <div>main page</div>
+                <div>tasks</div>
+                <div>friends</div>
+              </Items>
+            </Items>
+            <div className="layout__profile-modal">modal profile</div>
+          </>
+        </RoundContainer>
       </header>
-      <main>{children}</main>
+      <main className={"layout__main"}>{children}</main>
     </div>
   );
 };
